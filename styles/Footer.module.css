@@ -1,0 +1,18 @@
+.container {
+  min-height: 50vh;
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.container > div {
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.container > div .image_container img,
+.container > div .image_container {width: 100%;}
+.container > div .image_container img {
+  height: 200px;
+  width: 200px;
+}

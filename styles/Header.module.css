@@ -1,0 +1,37 @@
+.container {
+  height: 100px;
+  background-color: var(--primary-color);
+  position: absolute;
+  width: 100%;
+}
+
+.container.home {
+  background-color: transparent;
+}
+
+.container nav {
+  max-width: var(--desktop-width);
+  padding: 0 40px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+.container nav .logo {
+  height: 100%;
+}
+.container nav .logo img {
+  display: block;
+  height: 100%;
+}
+.container nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}

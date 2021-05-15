@@ -1,0 +1,7 @@
+.container {
+  min-height: calc(100vh + 100px);
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  /* background-color: var(--primary-color); */
+  padding: 100px 40px;
+}
