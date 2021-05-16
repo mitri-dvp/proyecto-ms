@@ -2,15 +2,14 @@
   color: var(--dark-color);
 }
 
-.main_container > section > div {
+.main_container > section > .main {
   max-width: var(--desktop-width);
   margin: auto;
-  /* min-height: 500px; */
   padding: 80px 40px;
 }
 
 .main_container h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 2px;
@@ -22,129 +21,6 @@
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
-.main_container section > div {
+.main_container section > .main {
   min-height: 600px;
 }
-
-/* QUIENES SOMOS */
-.main_container .quienes_somos > div {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-}
-.main_container .quienes_somos > div .image_container img,
-.main_container .quienes_somos > div .image_container {width: 100%;}
-
-/* PRODUCTOS */
-.main_container .productos {
-  /* background-color: var(--primary-color);
-  background-color: var(--secondary-color); */
-  background-image: linear-gradient(var(--secondary-color-transparent-1), var(--secondary-color-transparent-2)), url(/assets/hero-background.jpg);
-  background-image: linear-gradient(var(--primary-color-transparent-1), var(--primary-color-transparent-2)), url(/assets/hero-background.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  color: var(--white-color);
-}
-.main_container .productos > div {
-  padding: 80px 0;
-}
-.main_container .productos > div h1 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-.main_container .productos > div > h1 {
-  margin-bottom: 80px;
-}
-
-.main_container .productos > div .productos_lista {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-}
-
-.main_container .productos > div .productos_lista .productos_item .image_container img,
-.main_container .productos > div .productos_lista .productos_item .image_container {width: 100%;}
-
-/* .main_container .productos > div .productos_lista .productos_item h1 {
-  position: relative;
-  margin-bottom: 50px;
-}
-.main_container .productos > div .productos_lista .productos_item h1::after {
-  content: '';
-  margin-top: 15px;
-  display: block;
-  height: 10px;
-  width: 80px;
-  border-top: 2px solid var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-.main_container .productos > div .image_container {
-  padding: 20px 40px;
-}
-
-.main_container .productos > div .productos_lista p {
-  font-size: 0.8rem;
-  line-height: 1.4rem;
-  letter-spacing: 0.5px;
-  text-align: center;
-  margin-top: 20px;
-}
-.main_container .productos > div .productos_lista .productos_item {
-  background-color: rgba(255, 255, 255, 0.25);
-  padding: 40px 20px;
-}
-.main_container .productos > div .ir_a {
-  display: block;
-  width: max-content;
-  margin: 0 auto;
-  margin-top: 80px;
-  text-transform: uppercase;
-  border: 3px solid var(--secondary-color);
-  border: 3px solid var(--white-color);
-  font-weight: bold;
-  color: var(--secondary-color);
-  color: var(--white-color);
-  font-size: .9erm;
-  padding: .5rem 2rem;
-}
-
-/* PRODUCTOS DESTACADOS */
-.main_container .productos_destacados {
-  background-color: #f1f1f1;
-}
-.main_container .productos_destacados > div {
-  padding: 80px 0;
-}
-.main_container .productos_destacados > div > h1 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.main_container .productos_destacados .productos_destacados_lista {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.main_container .productos_destacados .productos_destacados_item .image_container,
-.main_container .productos_destacados .productos_destacados_item .image_container img {width: 100%;}
-.main_container .productos_destacados .productos_destacados_item {
-  background-color: var(--white-color);
-  padding: 40px 20px;
-}
-
-.main_container .productos_destacados .productos_destacados_item h1 {
-  font-size: 1.5rem;
-  letter-spacing: normal;
-  margin-top: 40px;
-  margin-bottom: 0;
-}
-

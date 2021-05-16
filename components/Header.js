@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import styles from '../styles/Header.module.css'
@@ -15,10 +14,10 @@ export default function Header() {
           <img src="/assets/icon/1.jpeg" alt="" />
         </div>
         <ul>
-          <li><Link href="/"><a>inicio</a></Link></li>
-          <li><Link href="#"><a>sobre nosotros</a></Link></li>
-          <li><Link href="/products"><a>productos</a></Link></li>
-          <li><Link href="#"><a>contacto</a></Link></li>
+          <li><a href="#inicio">inicio</a></li>
+          <li><a href="#quienes_somos">quiénes somos</a></li>
+          <li><a href="#productos">productos</a></li>
+          <li><a href="#contacto">contacto</a></li>
         </ul>
       </nav>
     </header>

@@ -1,0 +1,82 @@
+/* PRODUCTOS */
+.productos {
+  /* background-color: var(--primary-color);
+  background-color: var(--secondary-color); */
+  background-image: linear-gradient(var(--secondary-color-transparent-1), var(--secondary-color-transparent-2)), url(/assets/hero-background.jpg);
+  background-image: linear-gradient(var(--primary-color-transparent-1), var(--primary-color-transparent-2)), url(/assets/hero-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--white-color);
+}
+.productos .main {
+  max-width: var(--desktop-width);
+  margin: auto;
+  padding: 80px 0;
+}
+.productos .main h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.productos .main > h1 {
+  margin-bottom: 80px;
+}
+
+.productos .main .productos_lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.productos .main .productos_lista .productos_item .image_container img,
+.productos .main .productos_lista .productos_item .image_container {width: 100%;}
+
+/* .productos .main .productos_lista .productos_item h1 {
+  position: relative;
+  margin-bottom: 50px;
+}
+.productos .main .productos_lista .productos_item h1::after {
+  content: '';
+  margin-top: 15px;
+  display: block;
+  height: 10px;
+  width: 80px;
+  border-top: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+.productos .main .image_container {
+  padding: 20px 40px;
+}
+
+.productos .main .productos_lista p {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+.productos .main .productos_lista .productos_item {
+  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 1);
+  color: #010101;
+  padding: 40px 20px;
+}
+.productos .main .ir_a {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-transform: uppercase;
+  border: 3px solid var(--secondary-color);
+  border: 3px solid var(--white-color);
+  font-weight: bold;
+  color: var(--secondary-color);
+  color: var(--white-color);
+  font-size: .9erm;
+  padding: .5rem 2rem;
+}

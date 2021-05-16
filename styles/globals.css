@@ -23,6 +23,7 @@ body {
   --secondary-color-transparent-2: rgba(236, 182, 50, 0.8);
   --dark-color: #010101;
   --white-color: #fff;
+  scroll-behavior: smooth;
   font-family: FuturaLTW01-Medium, sans-serif;
   font-family: 'Open Sans';
   color: var(--dark-color);
@@ -41,4 +42,8 @@ a {
 
 h1 {
   font-size: 1.5rem;
+}
+
+.dnone {
+  display: none;
 }

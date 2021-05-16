@@ -1,0 +1,37 @@
+.productos {
+  background-color: #f4f4f4;
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+.productos .main {
+  max-width: var(--desktop-width);
+  margin: auto;
+  padding: 80px 0;
+}
+.productos .main > h1 {
+  /* font-size: 1.5rem; */
+  text-align: center;
+}
+.productos .main > h1 {
+  margin-bottom: 80px;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.botones button {
+  padding: 1rem 2rem;
+  border: 1px solid var(--dark-color);
+  background-color: transparent;
+  border-right: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+.botones button:last-child {
+  border-right: 1px solid;
+}
