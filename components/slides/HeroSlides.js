@@ -12,7 +12,7 @@ export function Slide1() {
         <div className={styles.content}>
           <h1>Bienvenido a <span>MS</span></h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <Link href="/contact"><a>Contacta Ahora</a></Link>
+          <a href="#contacto">Contacta Ahora</a>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@ export function Slide2() {
         <div className={styles.content}>
           <h1>Reseña de la empresa</h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <Link href="/contact"><a>Contacta Ahora</a></Link>
+          <a href="#contacto">Contacta Ahora</a>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ export function Slide3() {
         <div className={styles.content}>
           <h1>Misión</h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <Link href="/contact"><a>Contacta Ahora</a></Link>
+          <a href="#contacto">Contacta Ahora</a>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@ export function Slide4() {
         <div className={styles.content}>
           <h1>Visión</h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <Link href="/contact"><a>Contacta Ahora</a></Link>
+          <a href="#contacto">Contacta Ahora</a>
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@ export function Slide5() {
         <div className={styles.content}>
           <h1>Valores</h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <Link href="/contact"><a>Contacta Ahora</a></Link>
+          <a href="#contacto">Contacta Ahora</a>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@ export function Slide6() {
         <div className={styles.content}>
           <h1>Políticas</h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <Link href="/contact"><a>Contacta Ahora</a></Link>
+          <a href="#contacto">Contacta Ahora</a>
         </div>
       </div>
     </div>
