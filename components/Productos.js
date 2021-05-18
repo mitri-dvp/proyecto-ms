@@ -1,21 +1,10 @@
 import { useState } from 'react'
-import ProductosSlides from './slides/ProductosSlides'
+import ProductosGaleria from './slides/ProductosGaleria'
 
 import styles from '../styles/Productos.module.css'
 
-// QUE HACER.
-// Poner 5 Submenus pora las 5 líneas donde
-// cada línea tenga una galeria de imágenes
-
-// -recomendacion-
-// Crear 5 botones (Linea1, Linea2 ...) que
-// al darle click (onClick) revele el menu
-// correspondiente y oculte el que estaba
-
-
 export default function Productos() {
   const [selected, setSelected] = useState(1)
-
 
   return (
     <section className={styles.productos} id="productos">
@@ -30,11 +19,11 @@ export default function Productos() {
             <button onClick={() => setSelected(5)}>Linea 5</button>
           </div>
           <div className={styles.galeria}>
-            {selected === 1 && <ProductosSlides />}
-            {selected === 2 && '2'}
-            {selected === 3 && '3'}
-            {selected === 4 && '4'}
-            {selected === 5 && '5'}
+            {selected === 1 && <ProductosGaleria selected={selected}/>}
+            {selected === 2 && <ProductosGaleria selected={selected}/>}
+            {selected === 3 && <ProductosGaleria selected={selected}/>}
+            {selected === 4 && <ProductosGaleria selected={selected}/>}
+            {selected === 5 && <ProductosGaleria selected={selected}/>}
           </div>
         </div>
       </div>

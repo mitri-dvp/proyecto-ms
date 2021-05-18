@@ -1,14 +1,14 @@
-.item {
+.producto {
   /* border: 1px solid; */
 }
-.item .image_container,
-.item .image_container img {width: 100%;}
-.item {
+.producto .image_container,
+.producto .image_container img {width: 100%;}
+.producto {
   background-color: var(--white-color);
   padding: 40px 20px;
 }
 
-.item h1.title {
+.producto h1.title {
   font-size: 1.5rem;
   text-align: left;
   letter-spacing: normal;
