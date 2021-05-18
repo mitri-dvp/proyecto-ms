@@ -1,5 +1,5 @@
 import { products } from '../../utils/db'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useKeenSlider } from "keen-slider/react"
 
 import styles from '../../styles/slides/ProductosGaleria.module.css'
@@ -32,11 +32,10 @@ function ArrowRight(props) {
   )
 }
 
-export default function ProductosSlides({selected}) {
+export default function ProductosSlides({ selected }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
-    loop: true,
     slidesPerView: 3,
     spacing: 0,
     slideChanged(s) {
@@ -44,35 +43,17 @@ export default function ProductosSlides({selected}) {
     },
   })
 
-  useEffect(() => {
-    console.log(products)
-    const linea_1 = products.filter(product => product.categoria == 1)
+  const currentProducts = products.filter(product => product.line == selected)
 
-    console.log(linea_1)
-  }, [])
-
-  if(selected == 1)  return (
+  return (
     <div className='navigation-container'>
       <div className="navigation-wrapper" id="inicio">
         <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">
-            {Producto(1)}
-          </div>
-          <div className="keen-slider__slide number-slide2">
-            {Producto(2)}
-          </div>
-          <div className="keen-slider__slide number-slide3">
-            {Producto(1)}
-          </div>
-          <div className="keen-slider__slide number-slide4">
-            {Producto(1)}
-          </div>
-          <div className="keen-slider__slide number-slide5">
-            {Producto(1)}
-          </div>
-          <div className="keen-slider__slide number-slide6">
-            {Producto(1)}
-          </div>
+          {currentProducts.map(product => (
+            <div className="keen-slider__slide" key={product.id}>
+              {Producto(product)}
+            </div>
+          ))}
         </div>
         {slider && (
           <>
@@ -104,40 +85,17 @@ export default function ProductosSlides({selected}) {
       )}
     </div>
   )
-
-  if(selected == 2) {
-    return '2 :)'
-  }
-
-  return 'defecto'
 }
 
-
-function Producto(n) {
-  switch (n) {
-    case 1:
-    return (
-    <div className={styles.producto}>
-      <div className={styles.image_container}>
-        <img src="/assets/hero-4.jpg" alt="" />
-      </div>
-      <h1 className={styles.title}>nombre del producto 1</h1>
-      <p>$19.99</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, deleniti!</p>
-    </div>
-    )
-    case 2:
+  function Producto(item) {
     return (
       <div className={styles.producto}>
         <div className={styles.image_container}>
-          <img src="/assets/hero-4.jpg" alt="" />
+          <img src={item.images.url} alt="" />
         </div>
-        <h1 className={styles.title}>nombre del producto 2</h1>
-        <p>$19.99</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, deleniti!</p>
+        <h1 className={styles.title}>{item.name}</h1>
+        <p>${item.price}</p>
+        <p>{item.description}</p>
       </div>
-      )
-    default:
-      break;
+    )
   }
-}

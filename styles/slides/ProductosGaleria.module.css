@@ -2,11 +2,19 @@
   /* border: 1px solid; */
 }
 .producto .image_container,
-.producto .image_container img {width: 100%;}
+.producto .image_container img {max-width: 100%;}
 .producto {
-  background-color: var(--white-color);
+  background-color: inherit;
   padding: 40px 20px;
+  
 }
+.producto .image_container {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .producto h1.title {
   font-size: 1.5rem;

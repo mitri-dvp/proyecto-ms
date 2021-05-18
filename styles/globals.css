@@ -29,6 +29,10 @@ body {
   color: var(--dark-color);
 }
 
+button {
+  font-family: 'Open Sans';
+
+}
 a {
   color: inherit;
   text-decoration: none;

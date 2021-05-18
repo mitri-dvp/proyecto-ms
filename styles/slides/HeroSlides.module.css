@@ -55,13 +55,10 @@
 }
 
 .container > div .content a {
-  background-color: #fff;
   width: max-content;
   padding: 1rem 3rem;
   text-transform: uppercase;
   font-weight: bold;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  /* background-color: var(--primary-color);
-  color: var(--secondary-color); */
 }

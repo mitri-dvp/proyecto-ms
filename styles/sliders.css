@@ -4,7 +4,7 @@
 
 [class^="number-slide"],
 [class*=" number-slide"] {
-  background-color: #fff;
+  background-color: inherit;
   /* height: 100vh; */
 }
 

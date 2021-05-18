@@ -21,6 +21,10 @@
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
-.main_container section > .main {
+.main_container section:nth-child(even) {
+  background-color: #f8f8f8;
+}
+.main_container section:nth-child(odd) {
   min-height: 600px;
+  background-color: var(--white-color);
 }

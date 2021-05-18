@@ -31,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="./assets/icon/1.jpeg" />
       </Head>
 
-      <Loader loaded={loaded} />
+      {/* <Loader loaded={loaded} /> */}
 
       <Header />
       

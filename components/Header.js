@@ -15,8 +15,8 @@ export default function Header() {
         </div>
         <ul>
           <li><a href="#inicio">inicio</a></li>
-          <li><a href="#quienes_somos">quiénes somos</a></li>
           <li><a href="#productos">productos</a></li>
+          <li><a href="#quienes_somos">quiénes somos</a></li>
           <li><a href="#contacto">contacto</a></li>
         </ul>
       </nav>
