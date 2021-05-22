@@ -104,6 +104,9 @@
     display: block;
     display: flex;
   }
+  .dots.dnone .dot:last-child {
+    display: none;
+  }
   
   .arrow--separated.arrow--right,
   .arrow--separated.arrow--left {
