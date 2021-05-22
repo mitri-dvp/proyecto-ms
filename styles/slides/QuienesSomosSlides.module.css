@@ -19,7 +19,7 @@
   /* height: 100%; */
   max-width: var(--desktop-width);
   margin: 0 auto;
-  padding: 40px;
+  padding: 40px;  
 }
 .container > div .image_container img,
 .container > div .image_container {width: 100%;}
@@ -30,4 +30,18 @@
 }
 .slide_2 .contenido {
   order: 1;
+}
+
+@media (max-width: 800px) {
+  
+  .container > div {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 60px;
+    padding: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+
 }

@@ -6,7 +6,7 @@
 .productos .main {
   max-width: var(--desktop-width);
   margin: auto;
-  padding: 80px 0;
+  padding: 80px;
 }
 .productos .main > h1 {
   /* font-size: 1.5rem; */
@@ -22,7 +22,7 @@
 }
 
 .botones button {
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -31,13 +31,71 @@
   font-size: 1rem;
   font-weight: 100;
   font-weight: bold;
-  border: 0px solid var(--primary-color);
+  border: 2px solid transparent;
   opacity: 0.75;
   letter-spacing: .5px;
-
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
 }
 
 .botones button.active {
   border: 2px solid var(--primary-color);
   opacity: 1;
+}
+
+
+.botones button:hover {
+  opacity: 1;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+
+.galeria {
+  position: relative;
+}
+
+.gallery_transition {
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  animation: gallery-transition 0.5s;
+}
+
+@keyframes gallery-transition {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.desktop_gallery {display: block;}
+.tablet_gallery {display: none;}
+.mobile_gallery {display: none;}
+
+@media (max-width: 800px) {
+  .desktop_gallery {display: none;}
+  .tablet_gallery {display: block;}
+}
+
+@media (max-width: 600px) {
+  .tablet_gallery {display: none;}
+  .mobile_gallery {display: block;}
+  .productos .main {
+    padding: 40px 20px;
+  }
+  .productos .main > h1 {
+    margin-bottom: 40px;
+  }
+  .botones button {
+    letter-spacing: 0;
+  }
 }

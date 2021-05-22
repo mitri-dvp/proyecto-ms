@@ -41,6 +41,7 @@
 
 .dot.active {
   background: #000;
+  background: var(--dark-color);
 }
 
 .arrow {
@@ -68,7 +69,9 @@
 }
 
 .arrow--dark {
-  fill: #010101;
+  fill: var(--dark-color);
+  /* fill: var(--primary-color); */
+  /* stroke: var(--primary-color); */
 }
 
 .arrow--separated.arrow--left {
@@ -77,4 +80,26 @@
 .arrow--separated.arrow--right {
   left: auto;
   right: -50px;
+}
+
+@media (max-width: 800px) {
+  .dot {width: 80px;}
+
+}
+@media (max-width: 600px) {
+  .dot {
+    border: none;
+    width: 40px;
+  }
+  .dots.dnone {
+    bottom: -50px;
+    width: 100%;
+    display: block;
+    display: flex;
+  }
+  
+  .arrow--separated.arrow--right,
+  .arrow--separated.arrow--left {
+    display: none;
+  }
 }

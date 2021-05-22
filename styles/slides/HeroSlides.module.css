@@ -61,4 +61,34 @@
   font-weight: bold;
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+}
+
+.container > div .content a:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+  .container > div .image_container {
+    display: flex;
+    align-items: flex-end;
+    height: 250px;
+  }
+  .container > div .image_container img {
+    height: 100%;
+    width: auto;
+  }
+  .container > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .container > div .content {
+    text-align: center;
+  }
+  .container > div .content a {
+    margin: auto;
+  }
+
 }

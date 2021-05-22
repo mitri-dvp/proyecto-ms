@@ -32,11 +32,11 @@ function ArrowRight(props) {
   )
 }
 
-export default function ProductosSlides({ selected }) {
+export default function ProductosSlides({ selected, slides, variant }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
-    slidesPerView: 3,
+    slidesPerView: slides,
     spacing: 0,
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide)
@@ -51,7 +51,7 @@ export default function ProductosSlides({ selected }) {
         <div ref={sliderRef} className="keen-slider">
           {currentProducts.map(product => (
             <div className="keen-slider__slide" key={product.id}>
-              {Producto(product)}
+              <Producto product={product} variant={variant}/>
             </div>
           ))}
         </div>
@@ -87,15 +87,15 @@ export default function ProductosSlides({ selected }) {
   )
 }
 
-  function Producto(item) {
+  function Producto({product, variant}) {
     return (
       <div className={styles.producto}>
         <div className={styles.image_container}>
-          <img src={item.images.url} alt="" />
+          <img src={product.images.url} alt={product.images.alt} />
         </div>
-        <h1 className={styles.title}>{item.name}</h1>
-        <p>${item.price}</p>
-        <p>{item.description}</p>
+        <h1 className={styles.title}>{product.name}</h1>
+        <p>${product.price}</p>
+        {variant != 'mobile' && <p>{product.description}</p>}
       </div>
     )
   }
