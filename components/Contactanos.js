@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import styles from '../styles/Contactanos.module.css'
 
-
 export default function Contactanos() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+
 	const [error, setError] = useState(null);
 	const [data, setData] = useState(null);
 
@@ -23,21 +23,15 @@ export default function Contactanos() {
 		fetch('/api/email', {
 			method: 'POST',
 			body: JSON.stringify(body),
-			headers: {
-				'Content-Type': 'application/json'
-				// 'Content-Type': 'application/x-www-form-urlencoded',
-			}
+			headers: { 'Content-Type': 'application/json' }
 		})
-			.then(response => response.json())
-			.then(data => {
-				setData(data);
-			})
-			.catch(error => {
-				setError(true);
-			});
-
-		// ENVIAR DATOS A TRAVES DE UN POST REQUEST
-
+		.then(response => response.json())
+		.then(data => {
+			setData(data);
+		})
+		.catch(error => {
+			setError(true);
+		});
 	}
 
 	return (

@@ -1,43 +1,32 @@
 export default function handler(req, res) {	
 	if (req.method === 'POST') {
 		// Process a POST request
-		// console.log(req.body.name);
-		// console.log(req.body.email);
-		// console.log(req.body.message);
-		
-		const name = req.body.name;
-		const email = req.body.email;
-		const message = req.body.message;
+		const { name, email, message } = req.body;
 
-		//regex for international names
+		// REGEX
 		const regexName = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
-
-		// regex for email
 		const regexEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
-		if(name === ""){
-			console.log('Name cannot be empty');
-			return false;
+		// VALIDACION DE DATOS
+		if(!name || name === "") {
+			return res.status(400).json({ message: 'Por favor ingrese un Nombre.' });
 		}
-		if(email === ""){
-			console.log('Email cannot be empty');;
-			return false;
+		if(!email || email === "") {
+			return res.status(400).json({ message: 'Por favor ingrese un Email.' });
 		}
-		if(message === ""){
-			console.log('Message cannot be empty');
-			return false;
-		}
-		// PASO 3 VALIDAR DATOS CON REGEX
-		if(regexName.test(name) === false){
-			console.log('Invalid name');
-			return false;
-		}
-		if(regexEmail.test(email) === false){
-			console.log('Invalid email');
-		} else {
-			return res.status(200).json({ message: 'Mensaje Enviado' });
+		if(!message || message === "") {
+			return res.status(400).json({ message: 'Por favor ingrese un Mensaje.' });
 		}
 
+		
+		if(regexName.test(name) === false) {
+			return res.status(400).json({ message: 'Por favor ingrese un Nombre válido.' });
+		}
+		if(regexEmail.test(email) === false) {
+			return res.status(400).json({ message: 'Por favor ingrese un Email válido.' });
+		}
+		
+		return res.status(200).json({ message: 'Mensaje Enviado' });
 	}
 
 	return res.status(200).json({ message: 'Hola :)' })

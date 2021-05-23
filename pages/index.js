@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -7,21 +7,15 @@ import Footer from '../components/Footer'
 import QuienesSomos from '../components/QuienesSomos'
 import Productos from '../components/Productos'
 import Contactanos from '../components/Contactanos'
-import Ubicanos from '../components/Ubicanos'
+// import Ubicanos from '../components/Ubicanos'
 
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const imageRef = useRef()
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    if(imageRef.current.complete) {
-      setTimeout(() => {
-        setLoaded(true)
-      }, 50);
-    }
-  }, [])
+  const Ubicanos = dynamic(
+    () => import('../components/Ubicanos'), // replace '@components/map' with your component's location
+    { ssr: false } // This line is important. It's what prevents server-side render
+  )
 
   return (
     <div className={styles.container}>
@@ -45,8 +39,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
-      <img ref={imageRef} className='dnone' src="./assets/icon/1.jpeg" alt="" />
     </div>
   )
 }
