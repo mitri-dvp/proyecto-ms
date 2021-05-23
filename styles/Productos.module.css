@@ -34,7 +34,7 @@
   border: 2px solid transparent;
   opacity: 0.75;
   letter-spacing: .5px;
-  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+  transition: all .25 cubic-bezier(.25,.46,.45,.94);
 }
 
 .botones button.active {
@@ -70,7 +70,10 @@
   0% {
     opacity: 0;
   }
-  50% {
+  40% {
+    opacity: 1;
+  }
+  60% {
     opacity: 1;
   }
   100% {

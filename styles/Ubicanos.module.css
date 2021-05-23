@@ -1,0 +1,19 @@
+/* PRODUCTOS DESTACADOS */
+.container {
+	background-color: #f1f1f1;
+}
+
+.container>div {
+	max-width: var(--desktop-width);
+	margin: auto;
+	padding: 80px 0;
+	min-height: 600px;
+	/* background-color: var(--white-color); */
+}
+
+.container>div>h1 {
+	/* font-size: 1.5rem; */
+	text-align: center;
+	margin-bottom: 80px;
+}
+

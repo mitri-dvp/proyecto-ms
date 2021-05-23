@@ -14,7 +14,7 @@ export default function Productos() {
     setButton(n)
     setTimeout(() => {
       setSelected(n)
-    }, 250);
+    }, 100);
     setTimeout(() => {
       setTransition(false)
     }, 500);

@@ -4,10 +4,10 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
-import Loader from '../components/Loader'
 import QuienesSomos from '../components/QuienesSomos'
 import Productos from '../components/Productos'
 import Contactanos from '../components/Contactanos'
+import Ubicanos from '../components/Ubicanos'
 
 import styles from '../styles/Home.module.css'
 
@@ -41,6 +41,7 @@ export default function Home() {
         <Productos />
         <QuienesSomos/>
         <Contactanos />
+        <Ubicanos />
       </main>
 
       <Footer />
