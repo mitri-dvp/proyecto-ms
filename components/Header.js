@@ -9,7 +9,7 @@ export default function Header() {
   const [fixed, setFixed] = useState(false)
 
   useScrollPosition(({ currPos }) => {
-    if((currPos.y*-1) > window.innerHeight) {
+    if((currPos.y*-1) > window.innerHeight - 80) {
       setFixed(true)
     } else {
       setFixed(false)
@@ -30,6 +30,7 @@ export default function Header() {
           <li><a href="#productos">productos</a></li>
           <li><a href="#quienes_somos">quiénes somos</a></li>
           <li><a href="#contacto">contacto</a></li>
+          <li><a href="#ubicanos">ubicanos</a></li>
         </ul>
         <div className={styles.mobile_list}>
           <div className={styles.burger} onClick={() => setMobileMenu(!mobileMenu)}>
@@ -40,6 +41,7 @@ export default function Header() {
             <li><a href="#productos">productos</a></li>
             <li><a href="#quienes_somos">quiénes somos</a></li>
             <li><a href="#contacto">contacto</a></li>
+            <li><a href="#ubicanos">ubicanos</a></li>
           </ul>
         </div>
       </nav>

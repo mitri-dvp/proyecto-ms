@@ -23,6 +23,7 @@
   margin-top: 0px;
   margin-bottom: 0;
 }
+
 @media (max-width: 600px) {
   .producto .image_container {
     height: 200px;

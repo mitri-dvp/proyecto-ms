@@ -3,17 +3,30 @@
 	background-color: #f1f1f1;
 }
 
-.container>div {
+.container > div {
 	max-width: var(--desktop-width);
 	margin: auto;
-	padding: 80px 0;
+	padding: 80px;
 	min-height: 600px;
 	/* background-color: var(--white-color); */
 }
 
-.container>div>h1 {
+.container > div > h1 {
 	/* font-size: 1.5rem; */
 	text-align: center;
 	margin-bottom: 80px;
 }
 
+@media (max-width: 800px) {
+  .container > div {
+    padding: 40px;
+  }
+	.container > div > h1 {
+		margin-bottom: 40px;
+	}
+}
+@media (max-width: 600px) {
+  .container > div {
+    padding: 40px 20px;
+  }
+}

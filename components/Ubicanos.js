@@ -8,7 +8,7 @@ export default function Ubicanos() {
   )
 
 	return (
-		<section className={styles.container}>
+		<section className={styles.container}id="ubicanos">
 			<div className={styles.main}>
 				<h1>Ubicanos</h1>
 				<Map />

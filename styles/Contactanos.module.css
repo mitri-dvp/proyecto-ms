@@ -19,32 +19,62 @@
 
 
 /* form styles */	
+.form {
+	max-width: 600px;
+	margin: auto;
+}
+
+.formContainer * {
+  font-family: 'Open Sans';
+	font-size: 1rem;
+}
 .formContainer {
+	width: 100%;
 	display: grid;
 	justify-content: center;
 	align-items: center;
 	/* grid-template-columns: 1fr; */
 	gap: 10px;
 }
+.formContainer > * {
+	width: 100%;
+}
 
-.formItem {
-	justify-self: center;	
+.formGroup {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formItem label {
+	display: block;
+	margin-bottom: 5px;
+}
+.formItem textarea {
+	resize: vertical;
+	padding: 5px;
+}
+.formItem input {
+	padding: 5px;
 }
 
 .formSubmit {
-	justify-self: center;
 	width: max-content;
-	text-transform: uppercase;
-	font-weight: bold;
-	padding: 20px 40px;
-	border: none;
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
-
-}
-
-.formSubmit:hover {
+  padding: 1rem 3rem;
+	border: 0;
+	margin: auto;
+	letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
 	cursor: pointer;
+}
+.formSubmit:hover {
+	color: var(--primary-color);
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
 }
 
 .formItemToCenter {
@@ -68,24 +98,16 @@
 }
 
 
-/* 
-.container .container_lista {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+@media (max-width: 800px) {
+  .container > div {
+    padding: 40px;
+  }
+	.container > div > h1 {
+		margin-bottom: 40px;
+	}
 }
-
-.container .container_item .image_container,
-.container .container_item .image_container img {width: 100%;}
-.container .container_item {
-  background-color: var(--white-color);
-  padding: 40px 20px;
+@media (max-width: 600px) {
+  .container > div {
+    padding: 40px 20px;
+  }
 }
-
-.container .container_item h1 {
-  font-size: 1.5rem;
-  letter-spacing: normal;
-  margin-top: 40px;
-  margin-bottom: 0;
-}
- */

@@ -27,7 +27,14 @@ export default function Contactanos() {
 		})
 		.then(response => response.json())
 		.then(data => {
-			setData(data);
+			if(data.error) {
+				setError(true)
+				return
+			}
+			if(data.message) {
+				setData(data);
+				return
+			}
 		})
 		.catch(error => {
 			setError(true);
@@ -38,36 +45,42 @@ export default function Contactanos() {
 		<section className={styles.container}>
 			<div className={styles.main}>
 				<h1>Contáctanos</h1>
-				<form onSubmit={onSubmit}>
+				<form className={styles.form} onSubmit={onSubmit}>
 					<div className={styles.formContainer}>
-						<div className={styles.formItem}>
+						<div className={styles.formGroup}>
+							<div className={styles.formItem}>
+								<div className={styles.formItemToCenter}>
+									<label htmlFor="name">Nombre</label>
+									<input
+										type="name"
+										name="name"
+										id="name"
+										value={name}
+										onChange={(e) => setName(e.target.value)}
+										required
+									/>
+								</div>
+							</div>
+							<div className={styles.formItem}>
 							<div className={styles.formItemToCenter}>
-								<label htmlFor="name">Nombre</label>
+								<label htmlFor="email">Correo</label>
 								<input
-									type="name"
-									name="name"
-									id="name"
-									value={name}
-									onChange={(e) => setName(e.target.value)}
+									type="email"
+									name="email"
+									id="email"
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
 									required
 								/>
 							</div>
 						</div>
-						<div className={styles.formItem}>
-							<div className={styles.formItemToCenter}>
-								<label>Correo</label>
-								<input
-									type="email"
-									name="email"
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
-									required />
-							</div>
 						</div>
+					
 						<div className={styles.formItem}>
-							<p>Your Message</p>
+							<label htmlFor="message">Mensaje</label>
 							<textarea cols="50" rows="5"
 								name="message"
+								id="message"
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
 								required></textarea>
@@ -84,7 +97,7 @@ export default function Contactanos() {
 								<p className={styles.success}>Mensaje enviado</p>
 							}
 						</div>
-						<input type="submit" value="Submit" className={styles.formSubmit} />
+						<input type="submit" value="ENVIAR" className={styles.formSubmit} />
 					</div>
 				</form>
 			</div>

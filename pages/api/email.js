@@ -9,21 +9,21 @@ export default function handler(req, res) {
 
 		// VALIDACION DE DATOS
 		if(!name || name === "") {
-			return res.status(400).json({ message: 'Por favor ingrese un Nombre.' });
+			return res.status(400).json({ error: 'Por favor ingrese un Nombre.' });
 		}
 		if(!email || email === "") {
-			return res.status(400).json({ message: 'Por favor ingrese un Email.' });
+			return res.status(400).json({ error: 'Por favor ingrese un Email.' });
 		}
 		if(!message || message === "") {
-			return res.status(400).json({ message: 'Por favor ingrese un Mensaje.' });
+			return res.status(400).json({ error: 'Por favor ingrese un Mensaje.' });
 		}
 
 		
 		if(regexName.test(name) === false) {
-			return res.status(400).json({ message: 'Por favor ingrese un Nombre válido.' });
+			return res.status(400).json({ error: 'Por favor ingrese un Nombre válido.' });
 		}
 		if(regexEmail.test(email) === false) {
-			return res.status(400).json({ message: 'Por favor ingrese un Email válido.' });
+			return res.status(400).json({ error: 'Por favor ingrese un Email válido.' });
 		}
 		
 		return res.status(200).json({ message: 'Mensaje Enviado' });
