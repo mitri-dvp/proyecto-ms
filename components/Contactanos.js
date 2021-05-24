@@ -46,7 +46,6 @@ export default function Contactanos() {
 			<div className={styles.main}>
 				<h1>Contáctanos</h1>
 				<form className={styles.form} onSubmit={onSubmit}>
-					<div className={styles.formContainer}>
 						<div className={styles.formGroup}>
 							<div className={styles.formItem}>
 								<div className={styles.formItemToCenter}>
@@ -98,7 +97,6 @@ export default function Contactanos() {
 							}
 						</div>
 						<input type="submit" value="ENVIAR" className={styles.formSubmit} />
-					</div>
 				</form>
 			</div>
 		</section>
