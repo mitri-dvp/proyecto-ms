@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.copy}>
-          MS &copy; {new Date().getFullYear()} Todos los derechos reservados
+          Mundo Solinca &copy; {new Date().getFullYear()} Todos los derechos reservados
         </div>
       </div>
     </footer>

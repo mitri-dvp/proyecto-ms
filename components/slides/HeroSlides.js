@@ -10,7 +10,7 @@ export function Slide1() {
           <img src="/assets/hero-3.png" alt="" />
         </div>
         <div className={styles.content}>
-          <h1>Bienvenido a <span>MS</span></h1>
+          <h1>Bienvenido a <span>Mundo Solinca</span></h1>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
           <a href="#contacto">Contacta Ahora</a>
         </div>

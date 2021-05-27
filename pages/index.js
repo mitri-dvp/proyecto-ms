@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Proyecto MS</title>
-        <meta name="description" content="Proyecto MS" />
+        <title>Mundo Solinca</title>
+        <meta name="description" content="Bienvenidos a Mundo Solinca." />
         <link rel="icon" href="./assets/icon/1.jpeg" />
       </Head>
 
