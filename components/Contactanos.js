@@ -42,7 +42,7 @@ export default function Contactanos() {
 	}
 
 	return (
-		<section className={styles.container}>
+		<section className={styles.container} id="contacto">
 			<div className={styles.main}>
 				<h1>Contáctanos</h1>
 				<form className={styles.form} onSubmit={onSubmit}>

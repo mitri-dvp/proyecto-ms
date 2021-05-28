@@ -119,3 +119,10 @@
     padding: 40px 20px;
   }
 }
+
+
+@media (max-width: 375px) {
+  .formGroup{
+		grid-template-columns: 1fr;
+  }
+}
