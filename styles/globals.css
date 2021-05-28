@@ -48,3 +48,8 @@ h1 {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 375px) {
+  :root {
+    font-size: 0.7rem;
+  }
+}

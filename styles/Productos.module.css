@@ -102,3 +102,9 @@
     letter-spacing: 0;
   }
 }
+
+@media (max-width: 375px) {
+  .botones button {
+    padding: 1rem 0;
+  }
+}
