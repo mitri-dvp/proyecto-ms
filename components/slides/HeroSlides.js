@@ -85,20 +85,3 @@ export function Slide5() {
     </div>
   )
 }
-
-export function Slide6() {
-  return (
-    <div className={`${styles.container} ${styles.slide_2}`}>
-      <div>
-        <div className={styles.image_container}>
-          <img src="/assets/hero-3.png" alt="" />
-        </div>
-        <div className={styles.content}>
-          <h1>Políticas</h1>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean.</p>
-          <a href="#contacto">Contacta Ahora</a>
-        </div>
-      </div>
-    </div>
-  )
-}

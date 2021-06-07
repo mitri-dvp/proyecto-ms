@@ -4,14 +4,16 @@
 .container > div {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  text-align: center;
   gap: 80px;
   min-height: 600px;
   max-width: var(--desktop-width);
+  max-width: 600px;
   margin: 0 auto;
   padding: 40px;
 }
-.quienes-somos--slider .number-slide1 > div{
+.quienes-somos--slider .number-slide1 > div {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
@@ -23,6 +25,11 @@
 }
 .container > div .image_container img,
 .container > div .image_container {width: 100%;}
+.container > div .image_container img {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
 
 /* SLIDES */
 .slide_2 {

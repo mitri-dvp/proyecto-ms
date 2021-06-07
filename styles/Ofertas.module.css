@@ -1,0 +1,14 @@
+.container {
+  background-color: #f4f4f4;
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
+.container > h1 {
+  /* font-size: 1.5rem; */
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 0;
+}
+.container > h1 {
+  padding: 40px 80px;
+}

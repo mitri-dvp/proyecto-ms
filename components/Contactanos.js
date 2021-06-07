@@ -2,7 +2,9 @@ import { useState } from 'react'
 import styles from '../styles/Contactanos.module.css'
 
 export default function Contactanos() {
-	const [name, setName] = useState('');
+	const [names, setNames] = useState('');
+	const [lastNames, setLastNames] = useState('');
+	const [phone, setPhone] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 
@@ -14,11 +16,7 @@ export default function Contactanos() {
 		e.preventDefault('');
 		
 		// CAPTURAR DATOS
-		const body = {
-			name: name,
-			email: email,
-			message: message
-		};
+		const body = { names, lastNames, email, phone, message };
 
 		fetch('/api/email', {
 			method: 'POST',
@@ -49,30 +47,56 @@ export default function Contactanos() {
 						<div className={styles.formGroup}>
 							<div className={styles.formItem}>
 								<div className={styles.formItemToCenter}>
-									<label htmlFor="name">Nombre</label>
+									<label htmlFor="names">Nombres</label>
 									<input
-										type="name"
-										name="name"
-										id="name"
-										value={name}
-										onChange={(e) => setName(e.target.value)}
+										type="names"
+										name="names"
+										id="names"
+										value={names}
+										onChange={(e) => setNames(e.target.value)}
 										required
 									/>
 								</div>
 							</div>
 							<div className={styles.formItem}>
-							<div className={styles.formItemToCenter}>
-								<label htmlFor="email">Correo</label>
-								<input
-									type="email"
-									name="email"
-									id="email"
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
-									required
-								/>
+								<div className={styles.formItemToCenter}>
+									<label htmlFor="lastNames">Apellidos</label>
+									<input
+										type="lastNames"
+										name="lastNames"
+										id="lastNames"
+										value={lastNames}
+										onChange={(e) => setLastNames(e.target.value)}
+										required
+									/>
+								</div>
 							</div>
-						</div>
+							<div className={styles.formItem}>
+								<div className={styles.formItemToCenter}>
+									<label htmlFor="phone">Teléfono</label>
+									<input
+										type="phone"
+										name="phone"
+										id="phone"
+										value={phone}
+										onChange={(e) => setPhone(e.target.value)}
+										required
+									/>
+								</div>
+							</div>
+							<div className={styles.formItem}>
+								<div className={styles.formItemToCenter}>
+									<label htmlFor="email">Correo</label>
+									<input
+										type="email"
+										name="email"
+										id="email"
+										value={email}
+										onChange={(e) => setEmail(e.target.value)}
+										required
+									/>
+								</div>
+							</div>
 						</div>
 					
 						<div className={styles.formItem}>

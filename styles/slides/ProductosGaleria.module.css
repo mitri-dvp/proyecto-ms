@@ -9,7 +9,7 @@
   
 }
 .producto .image_container {
-  height: 250px;
+  min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
   font-size: 1.5rem;
   text-align: left;
   letter-spacing: normal;
-  margin-top: 0px;
+  margin-top: 15px;
   margin-bottom: 0;
 }
 

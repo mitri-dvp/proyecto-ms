@@ -27,21 +27,37 @@ export default function Productos() {
         <h1>PRODUCTOS</h1>
         <div className={styles.submenus}>
           <div className={styles.botones}>
-            <button className={button == 1 ? styles.active : ''} onClick={() => changeGallery(1)}>POP</button>
-            <button className={button == 2 ? styles.active : ''} onClick={() => changeGallery(2)}>Anthea</button>
-            <button className={button == 3 ? styles.active : ''} onClick={() => changeGallery(3)}>Tanques</button>
-            <button className={button == 4 ? styles.active : ''} onClick={() => changeGallery(4)}>Camarón</button>
-            <button className={button == 5 ? styles.active : ''} onClick={() => changeGallery(5)}>BioNET</button>
           </div>
           <div className={styles.galeria}>
-            {transition && <Transition />}
+            <h1>POP</h1>
             <div className={styles.desktop_gallery}>
-              {selected === 1 && <ProductosGaleria selected={selected} slides={3} variant={'desktop'} />}
-              {selected === 2 && <ProductosGaleria selected={selected} slides={3} variant={'desktop'} />}
-              {selected === 3 && <ProductosGaleria selected={selected} slides={3} variant={'desktop'} />}
-              {selected === 4 && <ProductosGaleria selected={selected} slides={3} variant={'desktop'} />}
-              {selected === 5 && <ProductosGaleria selected={selected} slides={3} variant={'desktop'} />}
+              <ProductosGaleria selected={1} slides={4} variant={'desktop'} />
             </div>
+          </div>
+          <div className={styles.galeria}>
+            <h1>Anthea</h1>
+            <div className={styles.desktop_gallery}>
+              <ProductosGaleria selected={2} slides={4} variant={'desktop'} />
+            </div>
+          </div>
+          <div className={styles.galeria}>
+            <h1>Tanques</h1>
+            <div className={styles.desktop_gallery}>
+              <ProductosGaleria selected={3} slides={4} variant={'desktop'} />
+            </div>
+          </div>
+          <div className={styles.galeria}>
+            <h1>Camarón</h1>
+            <div className={styles.desktop_gallery}>
+              <ProductosGaleria selected={4} slides={4} variant={'desktop'} />
+            </div>
+          </div>
+          <div className={styles.galeria}>
+            <h1>BioNET</h1>
+            <div className={styles.desktop_gallery}>
+              <ProductosGaleria selected={5} slides={4} variant={'desktop'} />
+            </div>
+          </div>
             <div className={styles.tablet_gallery}>
               {selected === 1 && <ProductosGaleria selected={selected} slides={2} variant={'tablet'} />}
               {selected === 2 && <ProductosGaleria selected={selected} slides={2} variant={'tablet'} />}
@@ -58,7 +74,6 @@ export default function Productos() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   )
 }

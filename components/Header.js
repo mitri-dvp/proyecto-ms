@@ -27,9 +27,12 @@ export default function Header() {
         </div>
         <ul className={styles.desktop_list}>
           <li><a href="#inicio">inicio</a></li>
+          <li><a href="#historia">historia</a></li>
           <li><a href="#productos">productos</a></li>
-          <li><a href="#quienes_somos">quiénes somos</a></li>
+          <li><a href="#ofertas">ofertas</a></li>
           <li><a href="#contacto">contacto</a></li>
+          <li><a href="#redes">redes</a></li>
+          <li><a href="#pago">pago</a></li>
           <li><a href="#ubicanos">ubicanos</a></li>
         </ul>
         <div className={styles.mobile_list}>
@@ -38,10 +41,12 @@ export default function Header() {
           </div>
           <ul className={mobileMenu ? styles.active : ' '}>
             <li><a href="#inicio">inicio</a></li>
+            <li><a href="#historia">historia</a></li>
             <li><a href="#productos">productos</a></li>
-            <li><a href="#quienes_somos">quiénes somos</a></li>
+            <li><a href="#ofertas">ofertas</a></li>
             <li><a href="#contacto">contacto</a></li>
-            <li><a href="#ubicanos">ubicanos</a></li>
+            <li><a href="#redes">redes</a></li>
+            <li><a href="#pago">pago</a></li>
           </ul>
         </div>
       </nav>
@@ -52,9 +57,13 @@ export default function Header() {
           </div>
           <ul className={styles.desktop_list}>
             <li><a href="#inicio">inicio</a></li>
+            <li><a href="#historia">historia</a></li>
             <li><a href="#productos">productos</a></li>
-            <li><a href="#quienes_somos">quiénes somos</a></li>
+            <li><a href="#ofertas">ofertas</a></li>
             <li><a href="#contacto">contacto</a></li>
+            <li><a href="#redes">redes</a></li>
+            <li><a href="#pago">pago</a></li>
+            <li><a href="#ubicanos">ubicanos</a></li>
           </ul>
         </nav>
         </div>

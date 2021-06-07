@@ -1,7 +1,7 @@
 import { useKeenSlider } from "keen-slider/react"
 import {useState} from 'react'
 
-import { Slide1, Slide2, Slide3, Slide4, Slide5, Slide6 } from './slides/HeroSlides'
+import { Slide1, Slide2, Slide3, Slide4, Slide5 } from './slides/HeroSlides'
 
 function ArrowLeft(props) {
   const disabeld = props.disabled ? " arrow--disabled" : ""
@@ -49,19 +49,16 @@ export default function Hero() {
             <Slide1 />
           </div>
           <div className="keen-slider__slide number-slide2">
-            <Slide2 />
+            <Slide1 />
           </div>
           <div className="keen-slider__slide number-slide3">
-            <Slide3 />
+            <Slide1 />
           </div>
           <div className="keen-slider__slide number-slide4">
-            <Slide4 />
+            <Slide1 />
           </div>
           <div className="keen-slider__slide number-slide5">
-            <Slide5 />
-          </div>
-          <div className="keen-slider__slide number-slide6">
-            <Slide6 />            
+            <Slide1 />
           </div>
         </div>
         {slider && (

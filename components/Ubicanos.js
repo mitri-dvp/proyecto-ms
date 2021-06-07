@@ -11,7 +11,9 @@ export default function Ubicanos() {
 		<section className={styles.container}id="ubicanos">
 			<div className={styles.main}>
 				<h1>Ubicanos</h1>
-				<Map />
+				<div className={styles.map}>
+					<Map />
+				</div>
 			</div>
 		</section>
 	)
