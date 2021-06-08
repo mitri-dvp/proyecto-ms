@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useScrollPosition } from '../hooks/useScrollPosition.tsx'
 
@@ -7,6 +7,26 @@ import styles from '../styles/Header.module.css'
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [fixed, setFixed] = useState(false)
+    const [date, setDate] = useState('');
+ 
+  useEffect(() => {
+    const interval = setInterval(
+      () => {
+        const dateObj = new Date()
+        const date_options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+        const time_options = { hour12: true, hour: '2-digit', minute: '2-digit' };
+        const date_format = dateObj.toLocaleDateString('es-ES', date_options).slice(6)
+        const time_format = dateObj.toLocaleTimeString('es-ES', time_options)
+        setDate(`maracaibo, ${date_format}, ${time_format}`.toUpperCase())
+      },
+      1000
+    );
+
+ 
+    return () => {
+      clearInterval(interval);
+    }
+  }, []);
 
   useScrollPosition(({ currPos }) => {
     if((currPos.y*-1) > window.innerHeight - 80) {
@@ -34,6 +54,9 @@ export default function Header() {
           <li><a href="#redes">redes</a></li>
           <li><a href="#pago">pago</a></li>
           <li><a href="#ubicanos">ubicanos</a></li>
+          <div className={styles.date}>
+            {date}
+          </div>
         </ul>
         <div className={styles.mobile_list}>
           <div className={styles.burger} onClick={() => setMobileMenu(!mobileMenu)}>
@@ -47,6 +70,9 @@ export default function Header() {
             <li><a href="#contacto">contacto</a></li>
             <li><a href="#redes">redes</a></li>
             <li><a href="#pago">pago</a></li>
+            <div className={styles.date}>
+              {date}
+            </div>
           </ul>
         </div>
       </nav>
@@ -64,6 +90,9 @@ export default function Header() {
             <li><a href="#redes">redes</a></li>
             <li><a href="#pago">pago</a></li>
             <li><a href="#ubicanos">ubicanos</a></li>
+            <div className={styles.date}>
+              {date}
+            </div>
           </ul>
         </nav>
         </div>
